@@ -28,4 +28,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
-[[ -z $DISPLAY && $XDG_VTNR -le 3 ]] && exec startx
+[[ -z $DISPLAY && $XDG_VTNR -le 3 ]] && . wmpicker.sh

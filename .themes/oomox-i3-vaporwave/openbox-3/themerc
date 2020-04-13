@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ### WINDOW
-border.width: 1
+border.width: 2
 
 window.client.padding.width: 0
 window.client.padding.height: 0
@@ -27,10 +27,10 @@ window.handle.width: 0
 padding.width: 4
 padding.height: 4
 
-window.active.border.color: #2d3036
-window.inactive.border.color: #2d3036
-window.active.title.separator.color: #0f111a
-window.inactive.title.separator.color: #0f111a
+window.active.border.color: #C574DD
+window.inactive.border.color: #414458
+window.active.title.separator.color: #0414458
+window.inactive.title.separator.color: #0414458
 window.active.client.color: #2d3036
 window.inactive.client.color: #2d3036
 
@@ -94,12 +94,12 @@ menu.separator.padding.height: 2
 menu.overlap.x: 0
 menu.overlap.y: 0
 
-menu.border.color: #aeb0b6
+menu.border.color: #20242b
 menu.separator.color: #a8adb5
 
 menu.title.text.color: #fdfdfd
-menu.items.text.color: #2d3036
-menu.items.disabled.text.color: #76797F
+menu.items.text.color: #fdfdfd
+menu.items.disabled.text.color: #BEBEC1
 menu.items.active.text.color: #0f111a
 menu.items.active.disabled.text.color: #aeb0b6
 
