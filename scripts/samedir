@@ -1,0 +1,6 @@
+#!/bin/bash
+WHEREAMI=$(cat /tmp/whereami)
+#WHEREAMI="cd ${WHEREAMI}"
+#xterm -e "$WHEREAMI; bash"
+#i3-sensible-terminal -e sh -c "$WHEREAMI; bash"
+urxvt -cd $WHEREAMI 

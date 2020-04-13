@@ -1,0 +1,84 @@
+#include "/home/filip/.config/xresources/default"
+
+xterm*faceName: Monospace
+xterm*faceSize: 10
+
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+*.font:	bitstream vera sans mono:size=9:antialias=true
+!*.font: Inconsolata:size=11:antialias=true
+URxvt*termName: rxvt-unicode-256color
+URxvt.perl-ext-common: selection-to-clipboard,default,matcher
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.url-launcher: google-chrome-stable
+URxvt.matcher.button: C-1
+
+dwm.normbordercolor:	BACKGROUND
+dwm.normbgcolor:	BACKGROUND
+dwm.normfgcolor:	FOREGROUND
+dwm.selbordercolor:	COLOR5
+dwm.selbgcolor:		COLOR5
+dwm.selfgcolor:		BACKGROUND
+dwm.normflcolor:	FOREGROUND
+dwm.selflcolor:		COLOR14
+
+*.background:   BACKGROUND
+*.foreground:   FOREGROUND
+*.cursorColor:	FOREGROUND
+
+! black
+*.color0:       COLOR0
+*.color8:       COLOR8 
+
+! red
+*.color1:       COLOR1
+*.color9:       COLOR9
+
+! green
+*.color2:       COLOR2
+*.color10:      COLOR10
+
+! yellow
+*.color3:       COLOR3
+*.color11:      COLOR11
+
+! blue
+*.color4:       COLOR4
+*.color12:      COLOR12
+
+! magenta
+*.color5:       COLOR5
+*.color13:      COLOR13
+
+! cyan
+*.color6:       COLOR6
+*.color14:      COLOR14
+
+! white
+*.color7:       COLOR7
+*.color15:	COLOR15
+!*.color15:      #BEBEC1
+
+!! URxvt Appearance
+URxvt.font: xft:bitstream vera sans mono:size=9:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=9:antialias=true
+!!URxvt.italicFont: -*-rissole-*
+!!URxvt.boldItalicfont: -*-rissole-*
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 5
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 999999
+URxvt.saveLines: 900000
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+URxvt.intensityStyles: true
