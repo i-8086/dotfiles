@@ -1,5 +1,4 @@
 pkill ibus-daemon &
-#exec ssh-agent bash
 ssh-add $HOME/.ssh/* &
 xrdb -load $HOME/.Xdefaults
 #xdotool keydown Super Shift key F5 keyup Super Shift
@@ -14,3 +13,6 @@ unclutter &
 xset -dpms
 xset s off
 dwmblocks &
+
+#exec $HOME/.confing/dwm/autostart_blocking.sh &
+#exec dwmbar &

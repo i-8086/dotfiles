@@ -10,5 +10,4 @@ nm-applet &
 unclutter &
 xset -dpms
 xset s off
-#tint2 &
-dwmblocks &
+#dwmblocks &

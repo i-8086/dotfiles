@@ -1,0 +1,44 @@
+#!/bin/sh
+trap 'update' 5
+
+delim="|"
+
+status() {
+	#get memory usage
+	free -h | awk '/^Mem/ { print $3"/"$2 }' | sed s/i//g
+
+	echo "$delim"
+
+	#disk usage
+	df -h | awk '/dev\/sda/ {print $3"/"$2}'
+
+	echo "$delim"
+
+	#get local ip
+	ip a | grep 'en\|wl' | grep inet | grep -v inet6 | cut -d \/ -f1 | sed 's/[^0-9\.]*//g'
+
+	echo "$delim"
+
+	#get master volume
+	amixer get Master | grep -o "[0-9]*%\|\[on\]\|\[off\]" | sed "s/\[on\]/🔊/;s/\[off\]/🔇/;2q"
+
+	echo "$delim"
+
+	#date and time
+	date "+(%a) %d-%b-%Y %H:%M"
+}
+
+
+update() { \
+		xsetroot -name "$(status | tr '\n' ' ')" &
+	wait
+}
+
+
+while :; do
+	update
+
+	sleep 2s &
+
+	wait
+done
