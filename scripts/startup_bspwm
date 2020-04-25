@@ -1,4 +1,3 @@
-pkill ibus-daemon &
 ssh-add $HOME/.ssh/* &
 xrdb -load $HOME/.Xdefaults
 numlockx on &
@@ -6,9 +5,9 @@ nitrogen --restore
 compton &
 dunst &
 nm-applet &
-#volumeicon &
+volumeicon &
 unclutter &
 xset -dpms
 xset s off
-#tint2 &
-dwmblocks &
+xsetroot -cursor_name left_ptr &
+polybar example &
