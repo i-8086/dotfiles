@@ -1,0 +1,86 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/filip/
+	..
+1579690589
+'b
+	/home/filip/bin/
+	..
+1579690589
+'h
+	/home/filip/
+	..
+1579690589
+'z
+	/home/filip/.config/vifm
+	..
+1579690589
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/filip/gitlab/ekg/backend
+	node_modules
+1
+d/home/filip/gitlab/ekg/backend/node_modules
+	..
+0
+d/home/filip/gitlab/ekg/backend
+	src
+2
+d/home/filip/gitlab/ekg/backend/src
+	api
+1
+d/home/filip/gitlab/ekg/backend/src/api
+	..
+0
+d/home/filip/gitlab/ekg/backend/src
+	config
+2
+d/home/filip/gitlab/ekg/backend
+	package.json
+9
+d
+
+# Right window history (oldest to newest):
+D/home/filip/gitlab/ekg/backend
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0

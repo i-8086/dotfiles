@@ -27,5 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-#[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
-[[ -z $DISPLAY && $XDG_VTNR -le 3 ]] && . wmpicker.sh
+export PATH="$HOME/.poetry/bin:$PATH"

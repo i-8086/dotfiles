@@ -3,8 +3,8 @@
 # for examples
 
 #export PATH="$HOME/scripts:$PATH"
-export PROMPT_COMMAND="pwd > /tmp/whereami"
-export TERMINAL=urxvt
+#export PROMPT_COMMAND="pwd > /tmp/whereami"
+#export TERMINAL=urxvt
 
 # If not running interactively, don't do anything
 case $- in
@@ -20,8 +20,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -123,5 +123,24 @@ fi
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' 
 }
-export PS1="\[\033[01;35m\]\u@\h\[\033[00m\] \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\u@\h \[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+set_working_dir() {
+  # All terminals after this command, will be opened in your current directory.
+  for var in "$@"
+  do
+    echo "$var" > ~/.cache/.last_dir 
+  done
+    if [ $# -eq 0 ]
+  then
+    pwd > ~/.cache/.last_dir
+    fi
+  echo '* Working directory saved.'
+}
+alias sss='set_working_dir'
+alias ddd='cd $(cat ~/.cache/.last_dir)'
+alias srv='services_start'
+alias src='source .venv/bin/activate'
+#source /home/filip/.oh-my-git/prompt.sh

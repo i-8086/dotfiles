@@ -1,4 +1,4 @@
-#include "/home/filip/.config/xresources/default"
+#include "/home/filip/.config/xresources/gruvbox"
 
 xterm*faceName: Monospace
 xterm*faceSize: 10
